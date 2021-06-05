@@ -11,6 +11,11 @@
 		9DF758432668D34300155610 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF758422668D34300155610 /* ContentView.swift */; };
 		9DF758452668D34B00155610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF758442668D34B00155610 /* Assets.xcassets */; };
 		9DF758482668D34B00155610 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF758472668D34B00155610 /* Preview Assets.xcassets */; };
+		9DF758502668D37100155610 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF7584F2668D37100155610 /* LibraryView.swift */; };
+		9DF758532668DDE300155610 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF758522668DDE300155610 /* RadioView.swift */; };
+		9DF758552668DE2A00155610 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF758542668DE2A00155610 /* SearchView.swift */; };
+		9DF75864266944CF00155610 /* FilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF75863266944CF00155610 /* FilterData.swift */; };
+		9DF75866266B7FC100155610 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF75865266B7FC100155610 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		9DF758442668D34B00155610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DF758472668D34B00155610 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9DF758492668D34B00155610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF7584F2668D37100155610 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		9DF758522668DDE300155610 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		9DF758542668DE2A00155610 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		9DF75863266944CF00155610 /* FilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterData.swift; sourceTree = "<group>"; };
+		9DF75865266B7FC100155610 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				9DF758402668D34300155610 /* AppleMusicApp.swift */,
-				9DF758422668D34300155610 /* ContentView.swift */,
+				9DF7586026693A0F00155610 /* Views */,
+				9DF7586126693A2100155610 /* Model */,
+				9DF7586226693A3400155610 /* Resourse */,
 				9DF758442668D34B00155610 /* Assets.xcassets */,
 				9DF758492668D34B00155610 /* Info.plist */,
 				9DF758462668D34B00155610 /* Preview Content */,
@@ -67,6 +79,33 @@
 				9DF758472668D34B00155610 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9DF7586026693A0F00155610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9DF758422668D34300155610 /* ContentView.swift */,
+				9DF7584F2668D37100155610 /* LibraryView.swift */,
+				9DF758522668DDE300155610 /* RadioView.swift */,
+				9DF758542668DE2A00155610 /* SearchView.swift */,
+				9DF75865266B7FC100155610 /* TestView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9DF7586126693A2100155610 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9DF75863266944CF00155610 /* FilterData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DF7586226693A3400155610 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resourse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF75866266B7FC100155610 /* TestView.swift in Sources */,
+				9DF758552668DE2A00155610 /* SearchView.swift in Sources */,
+				9DF75864266944CF00155610 /* FilterData.swift in Sources */,
+				9DF758532668DDE300155610 /* RadioView.swift in Sources */,
 				9DF758432668D34300155610 /* ContentView.swift in Sources */,
+				9DF758502668D37100155610 /* LibraryView.swift in Sources */,
 				9DF758412668D34300155610 /* AppleMusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

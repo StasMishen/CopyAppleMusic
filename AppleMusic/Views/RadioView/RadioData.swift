@@ -14,7 +14,7 @@ struct Radio: Identifiable {
     let subtitle: String
     let image: String
 }
-    var radios = [
+var radios = [
     Radio(category: "ОБНОВЛЕННЫЙ ПЛЕЙЛИСТ", title: "Кирилица", subtitle: "Apple Music русский хип-хоп", image: "1"),
     Radio(category: "НОВЫЙ EP", title: "COVERS - EP", subtitle: "Little Big", image: "4"),
     Radio(category: "СЛУШАЙ НОВЫЕ СИНГРЫ", title: "Happier Than Ever", subtitle: "Billie Eilish", image: "2"),

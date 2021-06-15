@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom),
+               content: {
         TabView() {
             LibraryView()
             .tabItem {
                 Image(systemName: "music.note.house.fill")
                 Text("Медиатека")
-
             }.tag(0)
             RadioView()
                 .tabItem {
@@ -26,9 +27,10 @@ struct ContentView: View {
                     Image(systemName: "magnifyingglass")
                     Text("Поиск")
                 }.tag(2)
-
         }
         .accentColor(.red)
+        PlayerView()
+               })
 }
 }
 

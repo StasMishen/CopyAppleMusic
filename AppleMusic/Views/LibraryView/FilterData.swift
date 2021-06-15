@@ -13,7 +13,7 @@ struct Item: Identifiable {
     let icon: String
 }
     var items = [
-    Item(title: "Прейлисты", icon: "music.note.list"),
+    Item(title: "Плейлисты", icon: "music.note.list"),
     Item(title: "Артисты", icon: "music.mic"),
     Item(title: "Альбомы", icon: "square.stack"),
     Item(title: "Песни", icon: "music.note"),

@@ -16,32 +16,25 @@ struct LibraryView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 6) {
-            if showFilter {
-            List(selection: $multiSelection) {
+                if showFilter {
+                    List(selection: $multiSelection) {
 
-                ForEach(items) {item in
-                    HStack {
-                        Image(systemName: item.icon)
-                            .foregroundColor(.red)
-                            .font(.system(size: 20))
-                            .frame(width: 20, alignment: .trailing)
-                        Text (item.title)
-                            .font(.system(size: 20))
-                    }
-                }
-                .onMove(perform: moveList)
-            }.listStyle(InsetListStyle())
+                        ForEach(items) {item in
+                            HStack {
+                                Image(systemName: item.icon)
+                                    .foregroundColor(.red)
+                                    .font(.system(size: 20))
+                                    .frame(width: 20, alignment: .trailing)
+                                Text (item.title)
+                                    .font(.system(size: 20))
+                            }
+                        }
+                        .onMove(perform: moveList)
+                    }.listStyle(InsetListStyle())
                 } else {
-                    Text("Ищете свою музыку?")
-                        .font(.title2).bold()
-                    Text("Здесь появляется купленная Вами в iTunes Store музыка")
-                        .multilineTextAlignment(.center)
-                        .frame(width: 300)
-                        .foregroundColor(.secondary)
+                    LibraryEmptyView()
                 }
             }
-
-
             .accentColor(.red)
             .navigationBarTitle("Медиатека")
             .environment(\.editMode, .constant(showFilter ? EditMode.active : EditMode.inactive))
@@ -58,12 +51,9 @@ struct LibraryView: View {
                                                 .font(.body)
                                                 .foregroundColor(Color.red)
                                         }
-
                                     }))
-
         }
     }
-
 
     func moveList(source: IndexSet, destination: Int) {
         items.move(fromOffsets: source, toOffset: destination)

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9D35DF7B266E6DB90005D6F2 /* RadioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D35DF7A266E6DB90005D6F2 /* RadioData.swift */; };
+		9D567E02267B6EAA00BE8658 /* SearchViewUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D567E01267B6EAA00BE8658 /* SearchViewUIKit.swift */; };
+		9D567E04267B78DA00BE8658 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D567E03267B78DA00BE8658 /* SearchViewCell.swift */; };
+		9D567E1B267E5DED00BE8658 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D567E1A267E5DED00BE8658 /* HeaderCollectionReusableView.swift */; };
 		9D9922A62678F14300ECA032 /* LibraryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9922A52678F14300ECA032 /* LibraryEmptyView.swift */; };
 		9D9922A82678F35200ECA032 /* MainGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9922A72678F35200ECA032 /* MainGalleryView.swift */; };
 		9D9922AA2678F52500ECA032 /* MainGalleryTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9922A92678F52500ECA032 /* MainGalleryTabView.swift */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		9D35DF7A266E6DB90005D6F2 /* RadioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioData.swift; sourceTree = "<group>"; };
+		9D567E01267B6EAA00BE8658 /* SearchViewUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewUIKit.swift; sourceTree = "<group>"; };
+		9D567E03267B78DA00BE8658 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
+		9D567E1A267E5DED00BE8658 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		9D9922A52678F14300ECA032 /* LibraryEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryEmptyView.swift; sourceTree = "<group>"; };
 		9D9922A72678F35200ECA032 /* MainGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGalleryView.swift; sourceTree = "<group>"; };
 		9D9922A92678F52500ECA032 /* MainGalleryTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGalleryTabView.swift; sourceTree = "<group>"; };
@@ -79,6 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				9DF758542668DE2A00155610 /* SearchView.swift */,
+				9D567E01267B6EAA00BE8658 /* SearchViewUIKit.swift */,
+				9D567E03267B78DA00BE8658 /* SearchViewCell.swift */,
+				9D567E1A267E5DED00BE8658 /* HeaderCollectionReusableView.swift */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -210,15 +219,18 @@
 			files = (
 				9DF758552668DE2A00155610 /* SearchView.swift in Sources */,
 				9D9922AC2678F6CD00ECA032 /* StationView.swift in Sources */,
+				9D567E02267B6EAA00BE8658 /* SearchViewUIKit.swift in Sources */,
 				9DF75864266944CF00155610 /* FilterData.swift in Sources */,
 				9D9922AE2678FA7A00ECA032 /* PlayerView.swift in Sources */,
 				9D35DF7B266E6DB90005D6F2 /* RadioData.swift in Sources */,
 				9DF758532668DDE300155610 /* RadioView.swift in Sources */,
 				9DF758432668D34300155610 /* ContentView.swift in Sources */,
+				9D567E04267B78DA00BE8658 /* SearchViewCell.swift in Sources */,
 				9D9922A82678F35200ECA032 /* MainGalleryView.swift in Sources */,
 				9D9922AA2678F52500ECA032 /* MainGalleryTabView.swift in Sources */,
 				9DF758502668D37100155610 /* LibraryView.swift in Sources */,
 				9DF758412668D34300155610 /* AppleMusicApp.swift in Sources */,
+				9D567E1B267E5DED00BE8658 /* HeaderCollectionReusableView.swift in Sources */,
 				9D9922A62678F14300ECA032 /* LibraryEmptyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

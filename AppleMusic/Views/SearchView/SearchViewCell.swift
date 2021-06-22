@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-struct Profile {
+struct Category {
     let name: String
     let imageName: String
 }
@@ -17,28 +17,22 @@ protocol ReusableView: AnyObject {
     static var identifier: String { get }
 }
 
-class ProfileCell: UICollectionViewCell {
-
+class CategoryCell: UICollectionViewCell {
+    
     private enum Constants {
-
-
-        // MARK: profileImageView layout constants
         static let imageHeight: CGFloat = 125.0
-
-        // MARK: Generic layout constants
-        static let verticalSpacing: CGFloat = 8.0
         static let horizontalPadding: CGFloat = 16.0
-        static var profileDescriptionVerticalPadding: CGFloat = 30.0
+        static var categoryDescriptionVerticalPadding: CGFloat = 30.0
     }
-
-    private let profileImageView: UIImageView = {
+    
+    private let categoryImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 8
         return imageView
     }()
-
+    
     let name: UILabel = {
         let label = UILabel(frame: .zero)
         label.textAlignment = .left
@@ -47,58 +41,48 @@ class ProfileCell: UICollectionViewCell {
         label.font = UIFont.boldSystemFont(ofSize: 14)
         return label
     }()
-
-
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setupViews()
         setupLayouts()
-
-        //let i = name.text?.count ?? 0
-
     }
-
+    
     private func setupViews() {
         contentView.backgroundColor = .white
-        contentView.addSubview(profileImageView)
+        contentView.addSubview(categoryImageView)
         contentView.addSubview(name)
     }
-
-
-
+    
     private func setupLayouts() {
-        profileImageView.translatesAutoresizingMaskIntoConstraints = false
+        categoryImageView.translatesAutoresizingMaskIntoConstraints = false
         name.translatesAutoresizingMaskIntoConstraints = false
-
-        // Layout constraints for `profileImageView`
+        
         NSLayoutConstraint.activate([
-            profileImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            profileImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            profileImageView.heightAnchor.constraint(equalToConstant: Constants.imageHeight)
+            categoryImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            categoryImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            categoryImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            categoryImageView.heightAnchor.constraint(equalToConstant: Constants.imageHeight)
         ])
-
-        // Layout constraints for `usernameLabel`
+        
         NSLayoutConstraint.activate([
             name.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.horizontalPadding),
             name.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.horizontalPadding),
-            name.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: -Constants.profileDescriptionVerticalPadding)
+            name.topAnchor.constraint(equalTo: categoryImageView.bottomAnchor, constant: -Constants.categoryDescriptionVerticalPadding)
         ])
-
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    func setup(with profile: Profile) {
-        profileImageView.image = UIImage(named: profile.imageName)
-        name.text = profile.name
+    
+    func setup(with category: Category) {
+        categoryImageView.image = UIImage(named: category.imageName)
+        name.text = category.name
     }
 }
 
-
-extension ProfileCell: ReusableView {
+extension CategoryCell: ReusableView {
     static var identifier: String {
         return String(describing: self)
     }

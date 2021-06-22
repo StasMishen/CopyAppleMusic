@@ -8,9 +8,9 @@
 import UIKit
 
 class HeaderCollectionReusableView: UICollectionReusableView {
-
+    
     static let identifier = "HeaderCollectionReusableView"
-
+    
     private let label: UILabel = {
         let label = UILabel()
         label.text = "Поиск по категориям"
@@ -19,7 +19,6 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         label.textColor = .black
         return label
     }()
-    
 
     public func configure() {
         addSubview(label)

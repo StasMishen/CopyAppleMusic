@@ -9,13 +9,13 @@ import SwiftUI
 import UIKit
 
 struct SomeView: UIViewControllerRepresentable {
-
-  func makeUIViewController(context: Context) -> UIViewController {
-      return SearchViewUIKit()
-  }
-
-  func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-  }
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        return SearchViewUIKit()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    }
 }
 
 struct SearchView: View {

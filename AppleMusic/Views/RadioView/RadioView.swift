@@ -15,10 +15,11 @@ struct RadioView: View {
                 MainGalleryView()
                 Divider()
                 StationView()
-            } // ScrollView Vertical
+            }
             .padding()
+            .padding(.bottom, 40)
             .navigationBarTitle("Радио")
-        } // NavigationView
+        }
     }
 }
 

@@ -11,7 +11,28 @@ import SwiftUI
 struct AppleMusicApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom),
+                   content: {
+                    TabView() {
+                        LibraryView()
+                            .tabItem {
+                                Image(systemName: "music.note.house.fill")
+                                Text("Медиатека")
+                            }.tag(0)
+                        RadioView()
+                            .tabItem {
+                                Image(systemName: "dot.radiowaves.left.and.right")
+                                Text("Радио")
+                            }.tag(1)
+                        SomeView()
+                            .tabItem {
+                                Image(systemName: "magnifyingglass")
+                                Text("Поиск")
+                            }.tag(2)
+                    }
+                    .accentColor(.red)
+                    PlayerView()
+                   })
         }
     }
 }

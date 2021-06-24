@@ -14,7 +14,7 @@ struct MainGalleryView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: hGridLayout) {
-                ForEach(radios) {item in
+                ForEach(Radio.item) {item in
                     VStack {
                         Divider()
                             .padding(.top, 4.0)
@@ -37,10 +37,10 @@ struct MainGalleryView: View {
                             .scaledToFit()
                             .frame(width: 370.0, height: 260.0, alignment: .leading)
                             .cornerRadius(10)
-                    } // VStack
-                } // ForEach
-            } // LazyHGrid
-        } // ScrollView Horizontal
+                    }
+                }
+            }
+        }
         .frame(height: 344.0)
     }
 }

@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct LibraryView: View {
-
+    
     @State private var editMode = EditMode.active
     @State private var multiSelection = Set<UUID>()
     @State private var showFilter = false
-
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 6) {
                 if showFilter {
                     List(selection: $multiSelection) {
-
-                        ForEach(items) {item in
+                        
+                        ForEach(Filter.item) {item in
                             HStack {
                                 Image(systemName: item.icon)
                                     .foregroundColor(.red)
@@ -54,9 +54,9 @@ struct LibraryView: View {
                                     }))
         }
     }
-
+    
     func moveList(source: IndexSet, destination: Int) {
-        items.move(fromOffsets: source, toOffset: destination)
+        Filter.item.move(fromOffsets: source, toOffset: destination)
     }
 }
 

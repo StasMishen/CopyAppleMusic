@@ -8,16 +8,9 @@
 import UIKit
 import Foundation
 
-struct Category {
-    let name: String
-    let imageName: String
-}
-
-protocol ReusableView: AnyObject {
-    static var identifier: String { get }
-}
-
 class CategoryCell: UICollectionViewCell {
+
+    static let identifier = "MyCell"
     
     private enum Constants {
         static let imageHeight: CGFloat = 125.0
@@ -79,11 +72,5 @@ class CategoryCell: UICollectionViewCell {
     func setup(with category: Category) {
         categoryImageView.image = UIImage(named: category.imageName)
         name.text = category.name
-    }
-}
-
-extension CategoryCell: ReusableView {
-    static var identifier: String {
-        return String(describing: self)
     }
 }

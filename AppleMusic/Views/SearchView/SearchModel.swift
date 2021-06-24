@@ -7,10 +7,14 @@
 
 import Foundation
 
-var categories: [Category] = []
+struct Categories: Identifiable {
+    let id = UUID()
+    let title: String
+    let image: String
+}
 
-func populateCategory() {
-    categories = [
+extension Categories {
+    static var item = [
         Category(name: "Хорошее настроение", imageName: "Хорошее настроение"),
         Category(name: "Спокойствие", imageName: "спокойствие"),
         Category(name: "Хиты", imageName: "Хиты"),

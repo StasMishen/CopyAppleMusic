@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlayerView: View {
     var body: some View {
-
+        
         HStack(spacing: 15) {
             Image("noMusic")
                 .resizable()
@@ -38,7 +38,7 @@ struct PlayerView: View {
         }
         .padding(.horizontal)
         .frame(height: 65)
-        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.965, green: 0.973, blue: 0.969)/*@END_MENU_TOKEN@*/)
+        .background(Color(red: 0.965, green: 0.973, blue: 0.969))
         .offset(y: -49.2)
     }
 }
